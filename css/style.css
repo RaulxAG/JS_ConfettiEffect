@@ -1,0 +1,98 @@
+@font-face {
+    font-family: 'Bros';
+    src: url(../assets/fonts/SuperMario256.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(128, 166, 172);
+}
+
+main {
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../assets/img/clouds.png);
+    background-repeat: no-repeat;
+    background-position: 1rem 2rem;
+    position: relative;
+}
+
+main::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../assets/img/clouds.png);
+    background-repeat: no-repeat;
+    background-position: 95rem 5rem;
+    z-index: -1;
+}
+
+.level {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100%;
+    padding-top: 10rem;
+}
+
+section {
+    width: fit-content;
+    height: fit-content;
+    border: 3.5px solid black;
+    border-radius: 13px;
+}
+
+section button {
+    cursor: pointer;
+    padding: 3rem 5rem;
+    border-radius: 10px;
+    border: 5px solid rgb(161, 88, 20);
+    background-color: rgb(197, 151, 66);
+    font-family: 'Bros';
+    font-size: 6rem;
+    color: whitesmoke;
+    text-align: center;
+    -webkit-text-stroke: medium black;
+    transition: all linear .4s;
+}
+
+/* section:hover {
+    transform: scale(1.05);
+    transition: all linear .3s;
+}*/
+
+button:active {
+    border: 5px solid rgb(134, 74, 17);
+    background-color: rgb(146, 112, 47);
+    color: #dfdfdf;
+}
+
+.ground {
+    height: 20vh;
+    background-color: rgb(62, 126, 62);
+    width: 100%;
+    position: relative;
+}
+
+.ground::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 75%;
+    bottom: 0;
+    left: 0;
+    background-color: #5c3e25;
+    box-shadow: inset 0 0 5px black;
+}
