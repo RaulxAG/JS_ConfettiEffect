@@ -13,9 +13,6 @@ window.onload = () => {
 
     block.addEventListener('click', () => {
 
-        block.innerHTML = "te amo";
-        block.style.fontSize = "3rem";
-
         setTimeout(() => {
             block.innerHTML = "?";
             block.style.fontSize = "6rem";
